@@ -110,6 +110,7 @@ public class PersonCell extends AbstractCell<PersonJso> {
 	public interface Template extends SafeHtmlTemplates {
 		//@formatter:off
 		@Template("<div class='person-cell'>"
+					+"<button type='button' class='open-dropdown'><i class='bi bi-gear'></i></button>"
 				 	+ "<header class='person-cell__header'>"
 				 		+ "<figure class='person-cell__profile'>"
 				 			+ "<img class='avatar' src=\"{12}\"></img>"
