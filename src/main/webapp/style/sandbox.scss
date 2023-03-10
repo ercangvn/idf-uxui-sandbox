@@ -19,7 +19,7 @@ html {
 body {
   margin: 0;
   background: #f9f9f9;
-  font-family: sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 figure {
@@ -254,6 +254,14 @@ figure {
   }
 }
 
+.mr-2 {
+  margin-right: 2px;
+}
+
+.mr-4 {
+  margin-right: 4px;
+}
+
 .person-list {
   padding: 15px 10px;
 
@@ -306,31 +314,83 @@ figure {
   &__badge {
     display: inline-block;
     margin: 3px;
-    padding: 6px 8px;
+    padding: 6px 14px;
     border-radius: 32px;
     background: $primary;
     color: #fff;
     font-size: 0.7rem;
+    font-style: italic;
   }
 
   &__item {
     margin: 8px 0;
     color: #595959;
+    font-weight: 500;
     word-break: break-word;
   }
 
+  &__id{
+    color: #a7a7a7;
+    font-size: .8rem;
+    margin-top: 6px;
+  }
+
   &__controls {
+    display: none;
+  }
+
+  &__nav {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     margin-top: 15px;
     padding-top: 15px;
     border-top: 1px solid $line;
+  }
 
-    .button {
-      margin: 4px;
-      padding: 7px 14px;
-      font-size: 0.7rem;
+  &__label {
+    display: block;
+    font-size: 0.7rem;
+    color: #a7a7a7;
+    margin-bottom: 4px;
+    font-weight: 500;
+  }
+
+  &__edit {
+    color: #777777;
+    transition: color 0.3s, transform 0.3s;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 0;
+    outline: transparent;
+    font-size: 20px;
+    padding: 5px;
+
+    &:hover {
+      color: $primary;
+      transform: rotate(45deg);
+    }
+  }
+
+  &__mail {
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-decoration: none;
+    transition: color 0.3s;
+    color: $secondary;
+
+    .bi{
+      font-size: 1rem;
+      position: relative;
+      top: 1px;
+    }
+
+    &:hover {
+      color: $primary;
     }
   }
 }
@@ -351,6 +411,22 @@ figure {
   }
 }
 
+.work {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .person-cell__item {
+    width: 48%;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+}
+
+.education {
+  text-align: left;
+}
+
 .grid-view {
   & > div {
     display: flex;
@@ -360,7 +436,7 @@ figure {
   .cellListEvenItem,
   .cellListOddItem {
     margin: 15px;
-    padding: 15px 15px 80px;
+    padding: 15px 15px 70px;
     width: calc(33.333333% - 30px);
   }
 
@@ -379,7 +455,7 @@ figure {
       text-align: center;
     }
 
-    &__controls {
+    &__nav {
       justify-content: center;
       margin-top: 0;
     }
@@ -435,15 +511,10 @@ figure {
       border-left: 1px solid $line;
     }
 
-    &__controls {
+    &__nav {
       margin-top: 0;
       padding-top: 0;
       border-top: none;
-
-      .button {
-        margin: 0 0 6px;
-        width: 100%;
-      }
     }
   }
 }
