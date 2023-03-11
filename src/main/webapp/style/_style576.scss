@@ -1,12 +1,12 @@
 @media(max-width:576px) {
   .person-view {
-    padding: 10px;
+    padding: 4px;
   }
 
   .grid-view {
     .cellListEvenItem,
     .cellListOddItem {
-      margin: 10px;
+      margin: 10px 0;
       padding: 10px 10px 80px;
       width: 100%;
     }
@@ -39,6 +39,14 @@
   }
 
   .person-list {
+    padding: 10px;
+  }
+
+  .person-cell__content {
+    font-size: 0.8rem;
+  }
+
+  .filter-toolbar__box{
     padding: 10px;
   }
 }

@@ -110,12 +110,13 @@ public class PersonCell extends AbstractCell<PersonJso> {
 	public interface Template extends SafeHtmlTemplates {
 		//@formatter:off
 		@Template("<div class='person-cell'>"
-					+"<button type='button' class='person-cell__edit open-dropdown' title='User Actions'><i class='bi bi-gear'></i></button>"
+					+"<span class='person-cell__edit open-dropdown' title='User Actions'><i class='bi bi-gear'></i>"
 					+ "<nav class='person-cell__controls controls'>"
-						+ "<button class='button button--outline-primary edit' action='{16}' title='Edit'><i class='edit' action='{16}'></i> Edit</button>"
-						+ "<button class='button button--outline-secondary copy' action='{17}' title='Copy'><i class='copy' action='{17}'></i> Copy</button>"
-						+ "<button class='button button--outline-danger delete' action='{18}' title='Delete'><i class='delete' action='{18}'></i> Delete</button>"
+						+ "<button class='button button--outline-primary edit' action='{16}' title='Edit'><i class='edit' action='{16}'></i><i class='bi bi-pencil-square'></i> Edit</button>"
+						+ "<button class='button button--outline-secondary copy' action='{17}' title='Copy'><i class='copy' action='{17}'></i><i class='bi bi-files'></i>Copy</button>"
+						+ "<button class='button button--outline-danger delete' action='{18}' title='Delete'><i class='delete' action='{18}'></i><i class='bi bi-trash3'></i> Delete</button>"
 					+ "</nav>"
+					+"</span>"
 				 	+ "<header class='person-cell__header'>"
 				 		+ "<figure class='person-cell__profile'>"
 				 			+ "<img class='avatar' src=\"{12}\"></img>"

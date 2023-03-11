@@ -272,6 +272,7 @@ figure {
     padding: 15px;
     border: 1px solid $line;
     background: #fff;
+    transition: border-color 0.3s;
   }
 }
 
@@ -329,14 +330,44 @@ figure {
     word-break: break-word;
   }
 
-  &__id{
+  &__id {
     color: #a7a7a7;
-    font-size: .8rem;
+    font-size: 0.8rem;
     margin-top: 6px;
   }
 
   &__controls {
     display: none;
+    position: absolute;
+    right: 0;
+    top: 35px;
+    background: #fff;
+    padding: 7px 10px;
+    border: 1px solid $line;
+    border-radius: 6px;
+    z-index: 4;
+    width: 120px;
+    @extend .bsh;
+
+    &:before{
+      content: '';
+      position: absolute;
+      width: 100%;
+      top: -35px;
+      height: 35px;
+      right: 0;
+      background: transparent;
+    }
+
+    .button {
+      width: 100%;
+      font-size: 0.7rem;
+      margin: 3px 0;
+    }
+
+    .bi{
+      margin-right: 2px;
+    }
   }
 
   &__nav {
@@ -370,9 +401,22 @@ figure {
     font-size: 20px;
     padding: 5px;
 
+    .bi-gear{
+      display: inline-block;
+      transition: transform .5s;
+    }
+
     &:hover {
       color: $primary;
-      transform: rotate(45deg);
+
+      .bi-gear{
+        transform: rotate(45deg);
+      }
+
+      .person-cell__controls {
+        display: block;
+        animation: fadeIn 0.5s;
+      }
     }
   }
 
@@ -383,7 +427,7 @@ figure {
     transition: color 0.3s;
     color: $secondary;
 
-    .bi{
+    .bi {
       font-size: 1rem;
       position: relative;
       top: 1px;
@@ -392,6 +436,15 @@ figure {
     &:hover {
       color: $primary;
     }
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
 
@@ -525,5 +578,9 @@ figure {
   padding-top: 12px;
   padding-bottom: 12px;
   width: 160px;
+}
+
+.active-border {
+  border-color: $primary;
 }
 @import 'style1400', 'style1200', 'style992', 'style768', 'style576';
