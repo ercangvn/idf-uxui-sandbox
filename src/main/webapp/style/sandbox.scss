@@ -272,7 +272,7 @@ figure {
     padding: 15px;
     border: 1px solid $line;
     background: #fff;
-    transition: border-color 0.3s;
+    transition: all 0.3s;
   }
 }
 
@@ -310,6 +310,7 @@ figure {
     left: 15px;
     z-index: 1;
     width: 100%;
+    transition: left .3s;
   }
 
   &__badge {
@@ -495,9 +496,10 @@ figure {
 
   .person-cell {
     &__badges {
-      left: 50%;
+      left: 0;
+      right: 0;
+      margin: 0;
       text-align: center;
-      transform: translateX(-50%);
     }
 
     &__profile {
@@ -581,12 +583,43 @@ figure {
   border-color: $primary;
 }
 
-.open-filters{
+.open-filters {
   margin-bottom: 15px;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   padding: 12px;
   display: none;
+  position: relative;
+
+  span{
+    pointer-events: none;
+  }
+
+  .bi {
+    transition: all 0.3s;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 12px;
+    pointer-events: none;
+  }
+
+  .bi-x-lg{
+    opacity: 0;
+    right: -12px;
+  }
+
+  &.active {
+    .bi-x-lg {
+      opacity: 1;
+      right: 12px;
+    }
+
+    .bi-funnel {
+      opacity: 0;
+      right: 40px;
+    }
+  }
 }
 @import 'style1400', 'style1200', 'style992', 'style768', 'style576';

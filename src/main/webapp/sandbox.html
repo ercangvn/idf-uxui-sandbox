@@ -43,11 +43,6 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
-	<script>
-		$(function() {
-			console.log("test");
-		});
-	</script>
 </head>
 
 <!--                                           -->
@@ -67,6 +62,22 @@
 			Your web browser must have JavaScript enabled in order for this application to display correctly.</div>
 	</noscript>
 
+	<script>
+		$("body").click(function(e) {
+			console.log(e.target.id);
+
+			if (e.target.id === "open-filters") {
+
+				if (!$("#open-filters").hasClass("active")) {
+					$("#open-filters span").text("Close Filters");
+				} else {
+					$("#open-filters span").text("Open Filters");
+				}
+
+				$("#open-filters").toggleClass("active").next().slideToggle();
+			}
+		});
+	</script>
 </body>
 
 </html>
