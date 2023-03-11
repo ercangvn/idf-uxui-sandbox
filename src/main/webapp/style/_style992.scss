@@ -1,15 +1,18 @@
 @media(max-width:992px) {
   .person-view {
     position: relative !important;
-    flex-direction: column-reverse;
   }
 
   .filter {
-    margin-top: 30px;
     width: 100%;
+    display: none;
   }
 
   .grid-content {
     width: 100%;
+  }
+
+  .open-filters{
+    display: flex;
   }
 }

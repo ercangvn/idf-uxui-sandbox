@@ -5,4 +5,18 @@
       width: calc(50% - 30px);
     }
   }
+
+  .table-view{
+    .person-cell__header{
+      width: 220px;
+    }
+
+    .person-cell__content{
+      width: calc(100% - 220px);
+    }
+
+    .person-cell__nav{
+      width: 235px;  
+    }
+  }
 }

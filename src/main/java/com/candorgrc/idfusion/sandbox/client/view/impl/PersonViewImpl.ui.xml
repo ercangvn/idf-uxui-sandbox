@@ -6,6 +6,10 @@
 
 	</ui:style>
 	<g:HTMLPanel styleName="person-view">
+		<button type="button" class="button button--primary open-filters" id="open-filters">
+			<span>Open Filters</span>
+			<i class="bi bi-funnel"></i>
+		</button>
 		<aside class="filter">
 			<!-- <strong class="filter__title">
 				Filters
